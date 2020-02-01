@@ -1,4 +1,67 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,800&display=swap");
+#top {
+  height: 100vh;
+  padding-top: 50px;
+  background-color: #d5d5d5;
+  position: relative; }
+  #top header {
+    height: 80px;
+    display: flex; }
+    #top header .logo {
+      float: left; }
+    #top header nav {
+      float: right;
+      line-height: 80px;
+      display: flex;
+      flex-grow: 1;
+      padding-left: 20%; }
+      #top header nav ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between; }
+        #top header nav ul * {
+          font-size: 0.8rem;
+          font-weight: 600;
+          color: #707070; }
+        #top header nav ul li a.active {
+          font-weight: bold; }
+        #top header nav ul li button {
+          color: white;
+          background-color: transparent;
+          border: 2px solid white; }
+  #top .top-text {
+    margin-top: 200px;
+    float: right;
+    width: 500px; }
+    #top .top-text h2 {
+      color: white;
+      font-size: 2rem;
+      font-weight: 800; }
+    #top .top-text p {
+      margin-top: 20px;
+      font-size: 1.2rem; }
+    #top .top-text button {
+      margin-top: 20px;
+      background-color: white;
+      width: 60%;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-size: 1.2rem;
+      color: #707070;
+      font-weight: 800; }
+  #top .down-arrow {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    margin-left: -15px;
+    background: url("../assets/img/down.png") no-repeat center center; }
+
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +76,9 @@ html {
 
 ul {
   list-style-type: none; }
+
+a {
+  text-decoration: none; }
 
 .inline-block {
   display: inline-block; }
@@ -31,17 +97,32 @@ ul {
   display: table;
   clear: both; }
 
-h1 {
-  font-size: 26px; }
-
-.icon {
-  cursor: pointer; }
-  .icon:hover, .icon:active, .icon:focus, .icon:visited {
-    -webkit-filter: sepia(100%) hue-rotate(40deg) saturate(200%) brightness(100%);
-    filter: sepia(100%) hue-rotate(40deg) saturate(200%) brightness(100%); }
-
 @media screen and (min-width: 480px) {
   .mobile-only {
     display: none; } }
+
+.wrapper {
+  max-width: 1500px;
+  width: 78%;
+  margin: 0 auto; }
+
+button {
+  border: none;
+  font-weight: bold; }
+
+button:hover,
+a:hover,
+.clickable:hover {
+  cursor: pointer; }
+
+.button-rounded {
+  padding: 10px 50px 10px 50px;
+  border-radius: 5px; }
+
+.logo {
+  border-radius: 10px;
+  width: 240px;
+  height: 80px;
+  background-color: #404040; }
 
 /*# sourceMappingURL=main.css.map */

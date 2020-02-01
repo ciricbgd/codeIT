@@ -1,4 +1,5 @@
 @import './vars';
+@import './top';
 
 * {
     margin: 0;
@@ -17,6 +18,10 @@ html {
 
 ul {
     list-style-type: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 //Inline-block
@@ -46,26 +51,45 @@ ul {
     }
 }
 
-//Headers
-h1 {
-    font-size: 26px;
-}
-
-//Icons
-.icon {
-    cursor: pointer;
-
-    &:hover,
-    &:active,
-    &:focus,
-    &:visited {
-        -webkit-filter: sepia(100%) hue-rotate(40deg) saturate(200%) brightness(100%);
-        filter: sepia(100%) hue-rotate(40deg) saturate(200%) brightness(100%);
-    }
-}
-
+//Mobile only
 .mobile-only {
     @include above ($m) {
         display: none;
     }
+}
+
+//Wrapper
+.wrapper {
+    max-width: 1500px;
+    width: 78%;
+    margin: 0 auto;
+}
+
+//Buttons
+button {
+    border: none;
+    font-weight: bold;
+}
+
+button,
+a,
+.clickable {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+.button-rounded {
+    padding: 10px 50px 10px 50px;
+    border-radius: 5px;
+}
+
+
+//Logo
+.logo {
+    border-radius: 10px;
+    width: 240px;
+    height: 80px;
+    background-color: $bgcolor4;
 }

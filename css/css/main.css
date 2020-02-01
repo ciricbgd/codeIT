@@ -5,43 +5,60 @@
   scroll-behavior: smooth;
   font-family: Arial;
   color: #999;
-  font-weight: 100; }
+  font-weight: 100;
+}
 
 html {
   position: relative;
-  min-height: 100%; }
+  min-height: 100%;
+}
 
 ul {
-  list-style-type: none; }
+  list-style-type: none;
+}
 
 .inline-block {
-  display: inline-block; }
+  display: inline-block;
+}
 
 .clickable {
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .float-left {
-  float: left; }
+  float: left;
+}
 
 .float-right {
-  float: right; }
+  float: right;
+}
 
 .clear-after::after {
   content: "";
   display: table;
-  clear: both; }
+  clear: both;
+}
 
 h1 {
-  font-size: 26px; }
+  font-size: 26px;
+}
 
 .icon {
-  cursor: pointer; }
-  .icon:hover, .icon:active, .icon:focus, .icon:visited {
-    -webkit-filter: sepia(100%) hue-rotate(40deg) saturate(200%) brightness(100%);
-    filter: sepia(100%) hue-rotate(40deg) saturate(200%) brightness(100%); }
+  cursor: pointer;
+}
+
+.icon:hover,
+.icon:active,
+.icon:focus,
+.icon:visited {
+  -webkit-filter: sepia(100%) hue-rotate(40deg) saturate(200%) brightness(100%);
+  filter: sepia(100%) hue-rotate(40deg) saturate(200%) brightness(100%);
+}
 
 @media screen and (min-width: 480px) {
   .mobile-only {
-    display: none; } }
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

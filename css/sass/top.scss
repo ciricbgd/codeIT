@@ -1,0 +1,96 @@
+#top {
+    height: 100vh;
+    padding-top: 50px;
+    background-color: $bgcolor2;
+    position: relative;
+
+    header {
+        height: 80px;
+        display: flex;
+
+        // ---------   Logo -----------
+        .logo {
+            float: left;
+        }
+
+        // ---------   Nav -----------
+        nav {
+            float: right;
+            line-height: 80px;
+            display: flex;
+            flex-grow: 1;
+            padding-left: 20%;
+
+            ul {
+                width: 100%;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+
+                * {
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    color: $color2;
+                }
+
+                li {
+
+                    a {
+                        &.active {
+                            font-weight: bold;
+                        }
+                    }
+
+                    button {
+                        color: $color4;
+                        background-color: transparent;
+                        border: 2px solid $bgcolor1;
+                    }
+                }
+            }
+        }
+    }
+
+    // ---------   Text section -----------
+    .top-text {
+        margin-top: 200px;
+        float: right;
+        width: 500px;
+
+        h2 {
+            color: $color4;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        button {
+            margin-top: 20px;
+            background-color: $bgcolor1;
+            width: 60%;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-size: 1.2rem;
+            color: $color2;
+            font-weight: 800;
+        }
+    }
+
+    // ---------   Down arrow -----------
+    .down-arrow {
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        position: absolute;
+        left: 50%;
+        bottom: 30px;
+        margin-left: -15px;
+        background: url('../assets/img/down.png') no-repeat center center;
+    }
+}
