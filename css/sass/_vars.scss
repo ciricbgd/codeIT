@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700&display=swap');
+
+// -------- Colors -----------------------------------------------------------
+
+$color1:#9d9898;
+$color2:#707070;
+$color3:#404040;
+$color4:white;
+
+$bgcolor1:white;
+$bgcolor2:#d5d5d5;
+$bgcolor3:#9d9898;
+
+
+//!-------- Colors -----------------------------------------------------------
+
+// -------- Fonts -----------------------------------------------------------
+
+$font1: 'Nunito Sans',
+sans-serif;
+
+//!-------- Fonts -----------------------------------------------------------
+
+// -------- Responsive design -----------------------------------------------------------
+
+$s:320px;
+$m:480px;
+$l:768px;
+
+@mixin above($size...) {
+
+  @if length($size)==1 {
+    @media screen and (min-width: nth($size, 1)) {
+      @content;
+    }
+  }
+
+  @if length($size)==2 {
+    @media screen and (max-width: nth($size, 2) - 0.02px) and (min-width: nth($size, 1)) {
+      @content;
+    }
+  }
+
+}
+
+//!-------- Responsive design -----------------------------------------------------------
