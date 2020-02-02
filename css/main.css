@@ -94,6 +94,49 @@
         background-color: #9d9898;
         font-size: 1.1rem; }
 
+#about {
+  padding: 40px 0 200px 0; }
+  #about h1,
+  #about p {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center; }
+  #about p {
+    margin: 20px auto 140px auto;
+    font-size: 1.2rem; }
+  #about .sliderContainer {
+    position: relative; }
+    #about .sliderContainer .nextBtn,
+    #about .sliderContainer .prevBtn {
+      width: 30px;
+      height: 30px;
+      background: url("../assets/img/down.png") no-repeat center center;
+      filter: invert(0.5);
+      position: absolute;
+      top: 35px;
+      opacity: 0.5;
+      transition: opacity 150ms; }
+      #about .sliderContainer .nextBtn:hover,
+      #about .sliderContainer .prevBtn:hover {
+        opacity: 1;
+        transition: opacity 300ms; }
+    #about .sliderContainer .nextBtn {
+      right: 0;
+      transform: rotate(-90deg); }
+    #about .sliderContainer .prevBtn {
+      left: 0;
+      transform: rotate(90deg); }
+    #about .sliderContainer .lSSlideOuter {
+      padding-left: 50px;
+      padding-right: 50px; }
+    #about .sliderContainer #lightSlider li img {
+      height: 95px;
+      width: 200px;
+      object-fit: cover;
+      object-position: center center; }
+    #about .sliderContainer .lSPager {
+      margin-top: 70px !important; }
+
 * {
   margin: 0;
   padding: 0;
@@ -152,7 +195,7 @@ a:hover,
   border-radius: 5px; }
 
 .logo {
-  border-radius: 10px;
+  border-radius: 5px;
   width: 240px;
   height: 80px;
   background-color: #404040; }

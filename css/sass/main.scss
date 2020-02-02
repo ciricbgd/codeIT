@@ -1,6 +1,7 @@
 @import './vars';
 @import './top';
 @import './main-section';
+@import './slider-section';
 
 * {
     margin: 0;
@@ -89,7 +90,7 @@ a,
 
 //Logo
 .logo {
-    border-radius: 10px;
+    border-radius: 5px;
     width: 240px;
     height: 80px;
     background-color: $bgcolor4;
