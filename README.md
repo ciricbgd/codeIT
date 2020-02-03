@@ -1,4 +1,4 @@
-# codeIT
+# CodeIT
 ## Zadatak za poziciju Frontend developer - CodeIT
 
 

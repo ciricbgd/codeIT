@@ -14,10 +14,18 @@
     color: $color3;
 }
 
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 html {
     position: relative;
     min-height: 100%;
 }
+
 
 ul {
     list-style-type: none;
@@ -66,6 +74,15 @@ a {
     max-width: 1500px;
     width: 78%;
     margin: 0 auto;
+
+    @include below($laptop) {
+        width: 90%;
+    }
+
+    @include below($xl) {
+        width: 95%;
+    }
+
 }
 
 //Buttons
@@ -114,4 +131,8 @@ h1 {
 
 h2 {
     font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
 }

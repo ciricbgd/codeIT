@@ -28,6 +28,8 @@ sans-serif;
 $s:320px;
 $m:480px;
 $l:768px;
+$xl:1024px;
+$laptop: 1366px;
 
 @mixin above($size...) {
 
@@ -44,5 +46,23 @@ $l:768px;
   }
 
 }
+
+@mixin below($size...) {
+
+  @if length($size)==1 {
+    @media screen and (max-width: nth($size, 1)) {
+      @content;
+    }
+  }
+
+  @if length($size)==2 {
+    @media screen and (max-width: nth($size, 2) - 0.02px) and (min-width: nth($size, 1)) {
+      @content;
+    }
+  }
+
+}
+
+
 
 //!-------- Responsive design -----------------------------------------------------------
