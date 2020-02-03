@@ -45,4 +45,34 @@ $(document).ready(function () {
         slider.goToNextSlide();
     });
 
+
+    //Hamburger menu
+
+    let nav = $('#nav');
+    let hamburgerOpenBtn = $('.hamburger-open');
+    let hamburgerCloseBtn = $('.hamburger-close');
+
+    function openNav() {
+        nav.animate({
+            left: "0"
+        });
+    }
+
+    function closeNav() {
+        nav.animate({
+            left: "100vw"
+        });
+    }
+
+    hamburgerOpenBtn.click(function () {
+        openNav();
+        $(this).hide();
+    });
+
+    hamburgerCloseBtn.click(function () {
+        closeNav();
+        hamburgerOpenBtn.show();
+    });
+
+
 });

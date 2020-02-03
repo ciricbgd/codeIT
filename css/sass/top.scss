@@ -8,6 +8,12 @@
         height: 80px;
         display: flex;
 
+        @include below(870px) {
+            display: block;
+        }
+
+
+
         // ---------   Logo -----------
         .logo {
             float: left;
@@ -17,15 +23,48 @@
         nav {
             float: right;
             line-height: 80px;
-            display: flex;
             flex-grow: 1;
             padding-left: 20%;
+
+            @include below($laptop) {
+                padding-left: 10%;
+            }
+
+            @include below($xl) {
+                padding-left: 20px;
+            }
+
+            @include below(870px) {
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                padding-left: 0;
+                top: 0;
+                left: 100vw;
+                background-color: rgba(15, 15, 15, 0.95);
+                z-index: 99;
+            }
 
             ul {
                 width: 100%;
                 display: flex;
                 flex-wrap: nowrap;
                 justify-content: space-between;
+
+                @include below(870px) {
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                    height: 50%;
+                    position: absolute;
+                    top: 20vh;
+                    left: 0;
+                    background-color: transparent !important;
+
+                    * {
+                        color: $color1 !important;
+                    }
+                }
 
                 * {
                     font-size: 0.8rem;
@@ -34,6 +73,15 @@
                 }
 
                 li {
+
+                    @include below($laptop) {
+                        margin-left: 10px;
+                    }
+
+                    @include below(870px) {
+                        margin-left: 0;
+                        line-height: normal;
+                    }
 
                     a {
                         &.active {
@@ -49,6 +97,34 @@
                 }
             }
         }
+
+        // ---------   Hamburger menu icon -----------
+        .hamburger-open {
+            display: none;
+            float: right;
+            width: 50px;
+            height: 50px;
+            filter: invert(1);
+            background: url('../assets/img/bars.svg') no-repeat center center;
+
+            @include below(870px) {
+                display: block;
+            }
+        }
+
+        .hamburger-close {
+            display: none;
+            float: right;
+            width: 50px;
+            height: 50px;
+            filter: invert(1);
+            background: url('../assets/img/times.svg') no-repeat center center;
+            margin: 50px;
+
+            @include below(870px) {
+                display: block;
+            }
+        }
     }
 
     // ---------   Text section -----------
@@ -57,13 +133,28 @@
         float: right;
         width: 500px;
 
+        @include below(870px) {
+            float: none;
+            margin: 200px auto 200px auto;
+            max-width: 85%;
+        }
+
         h2 {
+            @include below($l) {
+                font-size: 1.8rem;
+                text-align: center;
+            }
+
             color: $color4;
         }
 
         p {
             margin-top: 20px;
             font-size: 1.25rem;
+
+            @include below($l) {
+                font-size: 1rem;
+            }
         }
 
         button {
@@ -75,6 +166,12 @@
             font-size: 1.25rem;
             color: $color2;
             font-weight: 800;
+
+            @include below($l) {
+                margin: 20px auto 0 auto;
+                display: block;
+                max-width: 220px;
+            }
         }
     }
 

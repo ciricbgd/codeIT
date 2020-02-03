@@ -7,38 +7,108 @@
   #top header {
     height: 80px;
     display: flex; }
+    @media screen and (max-width: 870px) {
+      #top header {
+        display: block; } }
     #top header .logo {
       float: left; }
     #top header nav {
       float: right;
       line-height: 80px;
-      display: flex;
       flex-grow: 1;
       padding-left: 20%; }
+      @media screen and (max-width: 1366px) {
+        #top header nav {
+          padding-left: 10%; } }
+      @media screen and (max-width: 1024px) {
+        #top header nav {
+          padding-left: 20px; } }
+      @media screen and (max-width: 870px) {
+        #top header nav {
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          padding-left: 0;
+          top: 0;
+          left: 100vw;
+          background-color: rgba(15, 15, 15, 0.95);
+          z-index: 99; } }
       #top header nav ul {
         width: 100%;
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between; }
+        @media screen and (max-width: 870px) {
+          #top header nav ul {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            top: 20vh;
+            left: 0;
+            background-color: transparent !important; }
+            #top header nav ul * {
+              color: #9d9898 !important; } }
         #top header nav ul * {
           font-size: 0.8rem;
           font-weight: 600;
           color: #707070; }
+        @media screen and (max-width: 1366px) {
+          #top header nav ul li {
+            margin-left: 10px; } }
+        @media screen and (max-width: 870px) {
+          #top header nav ul li {
+            margin-left: 0;
+            line-height: normal; } }
         #top header nav ul li a.active {
           font-weight: bold; }
         #top header nav ul li button {
           color: white;
           background-color: transparent;
           border: 2px solid white; }
+    #top header .hamburger-open {
+      display: none;
+      float: right;
+      width: 50px;
+      height: 50px;
+      filter: invert(1);
+      background: url("../assets/img/bars.svg") no-repeat center center; }
+      @media screen and (max-width: 870px) {
+        #top header .hamburger-open {
+          display: block; } }
+    #top header .hamburger-close {
+      display: none;
+      float: right;
+      width: 50px;
+      height: 50px;
+      filter: invert(1);
+      background: url("../assets/img/times.svg") no-repeat center center;
+      margin: 50px; }
+      @media screen and (max-width: 870px) {
+        #top header .hamburger-close {
+          display: block; } }
   #top .top-text {
     margin-top: 200px;
     float: right;
     width: 500px; }
+    @media screen and (max-width: 870px) {
+      #top .top-text {
+        float: none;
+        margin: 200px auto 200px auto;
+        max-width: 85%; } }
     #top .top-text h2 {
       color: white; }
+      @media screen and (max-width: 768px) {
+        #top .top-text h2 {
+          font-size: 1.8rem;
+          text-align: center; } }
     #top .top-text p {
       margin-top: 20px;
       font-size: 1.25rem; }
+      @media screen and (max-width: 768px) {
+        #top .top-text p {
+          font-size: 1rem; } }
     #top .top-text button {
       margin-top: 20px;
       background-color: white;
@@ -48,6 +118,11 @@
       font-size: 1.25rem;
       color: #707070;
       font-weight: 800; }
+      @media screen and (max-width: 768px) {
+        #top .top-text button {
+          margin: 20px auto 0 auto;
+          display: block;
+          max-width: 220px; } }
   #top .down-arrow {
     display: block;
     width: 40px;
