@@ -6,7 +6,18 @@
         width: 50%;
         margin: 0 auto;
         text-align: center;
+
+        @include below($l) {
+            width: 70%;
+        }
+
+        @include below($m) {
+            width: 80%;
+        }
     }
+
+
+
 
     p {
         margin: 20px auto 140px auto;
@@ -46,16 +57,33 @@
         .lSSlideOuter {
             padding-left: 50px;
             padding-right: 50px;
+
+            @include below($l) {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            @include below($m) {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
         }
 
         #lightSlider {
             li {
+                @include below($l) {
+                    width: 30%;
+                }
 
                 img {
                     height: 95px;
                     width: 200px;
                     object-fit: cover;
                     object-position: center center;
+
+                    @include below($l) {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -63,6 +91,14 @@
         // Slider controls
         .lSPager {
             margin-top: 70px !important;
+
+            @include below($l) {
+                margin-top: 35px !important;
+            }
+
+            @include below($m) {
+                display: none;
+            }
         }
     }
 }

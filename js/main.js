@@ -10,17 +10,27 @@ $(document).ready(function () {
         speed: 600,
         controls: false,
         responsive: [{
-                breakpoint: 800,
+                breakpoint: 1700,
                 settings: {
-                    item: 3,
-                    slideMove: 1,
-                    slideMargin: 6,
+                    item: 5
+                }
+            },
+            {
+                breakpoint: 1450,
+                settings: {
+                    item: 4
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    item: 3
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    item: 2,
+                    item: 1,
                     slideMove: 1
                 }
             }
