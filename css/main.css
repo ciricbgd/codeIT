@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,800&display=swap");
 #top {
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #d5d5d5;
-  position: relative; }
+  position: relative;
+  background: url("../assets/img/background.jpg") no-repeat left center; }
   #top header {
     height: 80px;
     display: flex; }
@@ -11,7 +13,8 @@
       #top header {
         display: block; } }
     #top header .logo {
-      float: left; }
+      float: left;
+      filter: contrast(1000%); }
     #top header nav {
       float: right;
       line-height: 80px;
@@ -49,11 +52,11 @@
             left: 0;
             background-color: transparent !important; }
             #top header nav ul * {
-              color: #9d9898 !important; } }
+              color: white !important; } }
         #top header nav ul * {
           font-size: 0.8rem;
           font-weight: 600;
-          color: #707070; }
+          color: white; }
         @media screen and (max-width: 1366px) {
           #top header nav ul li {
             margin-left: 10px; } }
@@ -63,6 +66,8 @@
             line-height: normal; } }
         #top header nav ul li a.active {
           font-weight: bold; }
+        #top header nav ul li a:before {
+          background-color: white; }
         #top header nav ul li button {
           color: white;
           background-color: transparent;
@@ -104,6 +109,8 @@
           font-size: 1.8rem;
           text-align: center; } }
     #top .top-text p {
+      color: white;
+      opacity: 0.9;
       margin-top: 20px;
       font-size: 1.25rem; }
       @media screen and (max-width: 768px) {
@@ -116,7 +123,7 @@
       padding-top: 15px;
       padding-bottom: 15px;
       font-size: 1.25rem;
-      color: #707070;
+      color: #375369;
       font-weight: 800; }
       @media screen and (max-width: 768px) {
         #top .top-text button {
@@ -183,7 +190,7 @@
         padding-top: 15px;
         padding-bottom: 15px;
         color: white;
-        background-color: #9d9898;
+        background-color: #4589c0;
         font-size: 1.1rem; }
 
 #about {
@@ -243,11 +250,13 @@
     #about .sliderContainer #lightSlider li img {
       height: 95px;
       width: 200px;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center center; }
       @media screen and (max-width: 768px) {
         #about .sliderContainer #lightSlider li img {
           width: 100%; } }
+      #about .sliderContainer #lightSlider li img:hover {
+        filter: saturate(50) hue-rotate(180deg) brightness(75%); }
     #about .sliderContainer .lSPager {
       margin-top: 70px !important; }
       @media screen and (max-width: 768px) {
@@ -397,7 +406,9 @@
         font-style: italic; }
     #footer .wrapper #contact button {
       padding-left: 85px;
-      padding-right: 85px; }
+      padding-right: 85px;
+      background-color: #4589c0;
+      color: white; }
     #footer .wrapper .copyright {
       margin-right: 12vw; }
       @media screen and (max-width: 1024px) {
@@ -413,7 +424,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Nunito Sans", sans-serif;
-  color: #404040; }
+  color: #375369; }
 
 html,
 body {
@@ -448,10 +459,6 @@ a {
   display: table;
   clear: both; }
 
-@media screen and (min-width: 480px) {
-  .mobile-only {
-    display: none; } }
-
 .wrapper {
   max-width: 1500px;
   width: 78%;
@@ -467,6 +474,15 @@ button {
   border: none;
   font-weight: bold; }
 
+button,
+.hover-anim {
+  transition: transform 150ms ease-out; }
+  button:hover,
+  .hover-anim:hover {
+    transform: scale(1.2);
+    transform-origin: center;
+    transition: transform 300ms; }
+
 button:hover,
 a:hover,
 .clickable:hover {
@@ -480,7 +496,7 @@ a:hover,
   border-radius: 5px;
   width: 240px;
   height: 80px;
-  background-color: #404040; }
+  background: url("../assets/img/logo.webp") no-repeat center center; }
 
 h1,
 h2,
@@ -498,5 +514,32 @@ h2 {
 
 h3 {
   font-size: 1.5rem; }
+
+li > a {
+  position: relative;
+  color: #000;
+  text-decoration: none; }
+
+li > a:hover {
+  color: #000; }
+
+li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #29439b;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.1s ease-in-out 0s;
+  transition: all 0.1s ease-in-out 0s; }
+
+li > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1); }
 
 /*# sourceMappingURL=main.css.map */

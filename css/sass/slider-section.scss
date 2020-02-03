@@ -78,11 +78,15 @@
                 img {
                     height: 95px;
                     width: 200px;
-                    object-fit: cover;
+                    object-fit: contain;
                     object-position: center center;
 
                     @include below($l) {
                         width: 100%;
+                    }
+
+                    &:hover {
+                        filter: saturate(50) hue-rotate(180deg) brightness(75%);
                     }
                 }
             }

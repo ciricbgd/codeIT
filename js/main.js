@@ -5,7 +5,7 @@ $(document).ready(function () {
     let slider = $('#lightSlider');
     slider.lightSlider({
         item: 6,
-        slideMove: 3,
+        slideMove: 1,
         easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
         speed: 600,
         controls: false,

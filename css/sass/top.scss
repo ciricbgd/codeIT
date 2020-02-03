@@ -1,8 +1,10 @@
 #top {
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 50px;
+    padding-bottom: 50px;
     background-color: $bgcolor2;
     position: relative;
+    background: url('../assets/img/background.jpg') no-repeat left center;
 
     header {
         height: 80px;
@@ -17,6 +19,7 @@
         // ---------   Logo -----------
         .logo {
             float: left;
+            filter: contrast(1000%);
         }
 
         // ---------   Nav -----------
@@ -62,14 +65,14 @@
                     background-color: transparent !important;
 
                     * {
-                        color: $color1 !important;
+                        color: $color4 !important;
                     }
                 }
 
                 * {
                     font-size: 0.8rem;
                     font-weight: 600;
-                    color: $color2;
+                    color: $color4;
                 }
 
                 li {
@@ -86,6 +89,10 @@
                     a {
                         &.active {
                             font-weight: bold;
+                        }
+
+                        &:before {
+                            background-color: $bgcolor1;
                         }
                     }
 
@@ -149,6 +156,8 @@
         }
 
         p {
+            color: $color4;
+            opacity: 0.9;
             margin-top: 20px;
             font-size: 1.25rem;
 
@@ -164,7 +173,7 @@
             padding-top: 15px;
             padding-bottom: 15px;
             font-size: 1.25rem;
-            color: $color2;
+            color: $color3;
             font-weight: 800;
 
             @include below($l) {
