@@ -137,6 +137,78 @@
     #about .sliderContainer .lSPager {
       margin-top: 70px !important; }
 
+#footer {
+  position: relative; }
+  #footer .back-to-top {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 4vw;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    background-image: url("../assets/img/arrow-up.svg"); }
+  #footer .wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 50px; }
+    #footer .wrapper:first-of-type {
+      border-bottom: 1px solid #9d9898; }
+    #footer .wrapper:nth-of-type(2) {
+      margin-top: 70px;
+      padding-bottom: 120px; }
+    #footer .wrapper .info .lists {
+      display: inline-block; }
+      #footer .wrapper .info .lists * {
+        color: #707070; }
+      #footer .wrapper .info .lists ul {
+        vertical-align: top;
+        display: inline-block;
+        margin-left: 70px; }
+        #footer .wrapper .info .lists ul li {
+          margin-bottom: 5px; }
+    #footer .wrapper .info .social-media {
+      display: inline-block;
+      margin-left: 50px;
+      vertical-align: bottom; }
+      #footer .wrapper .info .social-media .icon {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-left: 20px;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        opacity: 0.5; }
+      #footer .wrapper .info .social-media .icon-instagram {
+        background-image: url("../assets/img/instagram.svg"); }
+      #footer .wrapper .info .social-media .icon-twitter {
+        background-image: url("../assets/img/twitter.svg"); }
+      #footer .wrapper .info .social-media .icon-facebook {
+        background-image: url("../assets/img/facebook.svg"); }
+    #footer .wrapper #contact h2 {
+      margin-bottom: 40px; }
+    #footer .wrapper #contact input,
+    #footer .wrapper #contact button {
+      font-size: 1.1rem; }
+    #footer .wrapper #contact input {
+      margin-right: 20px;
+      border: 1px solid #707070; }
+      #footer .wrapper #contact input::placeholder {
+        font-style: italic; }
+    #footer .wrapper #contact button {
+      padding-left: 85px;
+      padding-right: 85px; }
+    #footer .wrapper .copyright {
+      margin-right: 12vw; }
+      #footer .wrapper .copyright * {
+        color: #9d9898; }
+
 * {
   margin: 0;
   padding: 0;
